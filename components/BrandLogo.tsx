@@ -21,7 +21,7 @@ export default function BrandLogo({
 
   return (
     <Link href="/" className={`inline-flex items-center gap-3 group ${className}`}>
-      <div className="relative overflow-hidden rounded-lg border border-amber-500/20 group-hover:border-amber-400/50 transition-colors shadow-glow-gold-sm bg-black/40 flex-shrink-0">
+      <div className="relative overflow-hidden rounded-lg border border-[#00E599]/30 group-hover:border-[#00FFA3]/60 transition-colors shadow-[0_0_15px_rgba(0,229,153,0.35)] bg-black/60 flex-shrink-0">
         <Image
           src="/brand/fundedflex-logo.jpg"
           alt="FundedFlex Logo"
@@ -36,7 +36,7 @@ export default function BrandLogo({
           <span className="text-xl font-bold tracking-tight text-white group-hover:text-white transition-colors">
             Funded
           </span>
-          <span className="text-xl font-extrabold tracking-tight gold-text-gradient ml-0.5">
+          <span className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#00FFA3] via-[#00E599] to-emerald-400 bg-clip-text text-transparent ml-0.5">
             Flex
           </span>
         </div>

@@ -1,27 +1,26 @@
-import React from "react";
-import { Cpu, Zap, ShieldCheck, Scale } from "lucide-react";
+import { Coins, ShieldCheck, TrendingUp, Globe } from "lucide-react";
 
 export default function TrustStrip() {
   const items = [
     {
-      icon: Cpu,
-      title: "SIMULATED ACCOUNTS",
-      desc: "Institutional-grade demo conditions with zero personal capital risk",
-    },
-    {
-      icon: Zap,
-      title: "CRYPTO PAYMENTS",
-      desc: "Direct non-custodial USDT, USDC, BTC, and ETH checkout",
+      icon: Coins,
+      title: "INSTITUTIONAL FUNDING",
+      desc: "Up to $200,000 in simulated proprietary trading capital with instant crypto settlement",
     },
     {
       icon: ShieldCheck,
-      title: "FAST DELIVERY",
-      desc: "Rapid account generation upon admin payment confirmation",
+      title: "MANAGE RISK",
+      desc: "Transparent 5% daily & 10% maximum drawdown limits engineered for consistency",
     },
     {
-      icon: Scale,
-      title: "TRANSPARENT RULES",
-      desc: "Clear 5% daily & 10% maximum drawdown limits with no surprises",
+      icon: TrendingUp,
+      title: "PROFESSIONAL EXECUTION",
+      desc: "Institutional spreads, zero hidden rules, and full FundedFlex MT5 terminal compatibility",
+    },
+    {
+      icon: Globe,
+      title: "GLOBAL TRADERS",
+      desc: "Join an elite international community of traders. Trade Bigger. Live Freer.",
     },
   ];
 
@@ -36,7 +35,7 @@ export default function TrustStrip() {
                 key={idx}
                 className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-white/[0.02] transition-colors"
               >
-                <div className="p-2.5 rounded-lg bg-[#F59E0B]/10 border border-[#F59E0B]/20 text-[#F59E0B] flex-shrink-0">
+                <div className="p-2.5 rounded-lg bg-[#00E599]/10 border border-[#00E599]/20 text-[#00E599] flex-shrink-0">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div>

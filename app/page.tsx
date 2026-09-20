@@ -52,31 +52,33 @@ export default async function HomePage() {
             {/* Left Hero Content */}
             <div className="lg:col-span-6 text-center lg:text-left">
               {/* Luxury Institutional Badge */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#080D11]/90 border border-amber-500/30 text-xs text-zinc-200 mb-8 shadow-[0_4px_25px_rgba(0,0,0,0.8)] backdrop-blur-xl">
-                <Crown className="w-4 h-4 text-amber-400" />
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#080D11]/90 border border-[#00E599]/30 text-xs text-zinc-200 mb-8 shadow-[0_4px_25px_rgba(0,0,0,0.8)] backdrop-blur-xl">
+                <span className="w-2 h-2 rounded-full bg-[#00FFA3] animate-ping" />
                 <span className="font-extrabold text-white tracking-widest uppercase text-[10px]">
-                  Institutional Capital Desk
+                  FUNDED FLEX • PROP TRADING FOR A HIGHER YOU
                 </span>
                 <span className="text-zinc-600">•</span>
-                <span className="gold-text-gradient font-black tracking-widest text-[10px]">
-                  TRADE • GROW • FREEDOM
+                <span className="text-[#00FFA3] font-black tracking-widest text-[10px]">
+                  TRADE • PROVE • SCALE
                 </span>
               </div>
 
-              {/* Main Headline with Gold & Platinum Gradient */}
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.06]">
-                Trade Bigger. <br />
-                <span className="gold-text-gradient">Prove Your Edge.</span>
+              {/* Main Headline Matching Official Instagram Post: YOUR STRATEGY. OUR CAPITAL. */}
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.05] uppercase">
+                Your Strategy. <br />
+                <span className="bg-gradient-to-r from-[#00FFA3] via-[#00E599] to-emerald-400 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(0,229,153,0.5)]">
+                  Our Capital.
+                </span>
               </h1>
 
-              {/* Supporting Copy */}
+              {/* Supporting Copy from Instagram Campaign */}
               <p className="mt-6 text-base sm:text-lg text-zinc-300 leading-relaxed max-w-xl mx-auto lg:mx-0 font-normal">
-                Access up to <strong className="text-white font-semibold">$200,000 in simulated proprietary liquidity</strong>. Execute with institutional precision, transparent drawdown boundaries, and instant non-custodial crypto checkout.
+                Prove your skills, build your track record, and trade with up to <strong className="text-white font-bold">$200,000 in simulated funding</strong>. <span className="text-[#00FFA3] italic font-semibold">Trade Bigger. Live Freer.</span>
               </p>
 
               {/* Simulated Notice */}
               <div className="mt-3 text-xs text-zinc-400 font-medium">
-                * Simulated evaluation environment with zero personal trading capital risk.
+                * Simulated evaluation environment with institutional execution and instant crypto settlement.
               </div>
 
               {/* Hero Action CTAs */}
@@ -109,7 +111,7 @@ export default async function HomePage() {
                   </span>
                 </div>
                 <div>
-                  <span className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono block">
+                  <span className="text-2xl sm:text-3xl font-extrabold text-[#00E599] font-mono block">
                     90%
                   </span>
                   <span className="text-[10px] text-zinc-400 uppercase tracking-widest block mt-0.5">
@@ -155,8 +157,8 @@ export default async function HomePage() {
       {/* LUXURY VIP CONVERSION BANNER */}
       <section className="py-24 relative border-t border-white/10 luxury-ribbons-backdrop">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="p-10 sm:p-16 rounded-3xl bg-[#080C10]/95 border border-amber-500/30 shadow-[0_25px_90px_rgba(0,0,0,0.95)] backdrop-blur-2xl relative overflow-hidden">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/10 text-amber-300 text-xs font-bold uppercase tracking-widest mb-4 border border-amber-400/30">
+          <div className="p-10 sm:p-16 rounded-3xl bg-[#080C10]/95 border border-[#00E599]/30 shadow-[0_25px_90px_rgba(0,0,0,0.95)] backdrop-blur-2xl relative overflow-hidden">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00FFA3]/10 text-[#00FFA3] text-xs font-bold uppercase tracking-widest mb-4 border border-amber-400/30">
               <Sparkles className="w-3.5 h-3.5" />
               Elite Evaluation Fast-Track
             </div>
@@ -172,7 +174,7 @@ export default async function HomePage() {
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/accounts"
-                className="w-full sm:w-auto px-10 py-4 rounded-xl luxury-gold-button text-black font-black text-xs uppercase tracking-wider shadow-[0_0_30px_rgba(245,158,11,0.5)] transition-all"
+                className="w-full sm:w-auto px-10 py-4 rounded-xl luxury-gold-button text-black font-black text-xs uppercase tracking-wider shadow-[0_0_30px_rgba(0,229,153,0.5)] transition-all"
               >
                 Browse All 6 Account Sizes →
               </Link>

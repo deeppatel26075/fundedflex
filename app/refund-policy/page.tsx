@@ -4,7 +4,7 @@ export default function RefundPolicyPage() {
   return (
     <div className="py-12 md:py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-xs text-zinc-300 leading-relaxed">
       <div>
-        <span className="text-xs font-bold uppercase tracking-widest text-[#F59E0B]">
+        <span className="text-xs font-bold uppercase tracking-widest text-[#00E599]">
           Financial Guidelines
         </span>
         <h1 className="text-3xl font-extrabold text-white mt-1">

@@ -53,7 +53,7 @@ export default function FAQSection() {
     <section id="faq" className="py-20 relative bg-[#070A0B] border-t border-white/5">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F59E0B]/10 border border-[#F59E0B]/20 text-[#F59E0B] text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00E599]/10 border border-[#00E599]/20 text-[#00E599] text-xs font-semibold uppercase tracking-wider mb-4">
             <HelpCircle className="w-3.5 h-3.5" />
             Clear Answers
           </div>
@@ -82,7 +82,7 @@ export default function FAQSection() {
                   </span>
                   <ChevronDown
                     className={`w-4 h-4 text-zinc-400 transition-transform duration-200 flex-shrink-0 ${
-                      isOpen ? "rotate-180 text-[#F59E0B]" : ""
+                      isOpen ? "rotate-180 text-[#00E599]" : ""
                     }`}
                   />
                 </button>

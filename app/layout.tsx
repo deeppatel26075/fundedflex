@@ -65,7 +65,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <body
-        className={`${inter.variable} font-sans bg-[#050707] text-[#F8FAFC] min-h-screen flex flex-col selection:bg-[#F59E0B] selection:text-black antialiased`}
+        className={`${inter.variable} font-sans bg-[#050707] text-[#F8FAFC] min-h-screen flex flex-col selection:bg-[#00E599] selection:text-black antialiased`}
       >
         <Navbar user={user} />
         <main className="flex-grow pt-[72px]">{children}</main>

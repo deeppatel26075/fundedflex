@@ -20,13 +20,13 @@ export default function Footer() {
                 Supported Crypto:
               </span>
               <div className="flex items-center gap-1.5 font-mono text-[11px] font-bold text-white">
-                <span className="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                <span className="px-2 py-0.5 rounded bg-[#00E599]/10 text-[#00E599] border border-[#00E599]/20">
                   USDT (TRC20/ERC20)
                 </span>
                 <span className="px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">
                   USDC
                 </span>
-                <span className="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                <span className="px-2 py-0.5 rounded bg-[#00E599]/10 text-[#00E599] border border-[#00E599]/20">
                   BTC
                 </span>
                 <span className="px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">
@@ -103,7 +103,7 @@ export default function Footer() {
         {/* Regulatory & Simulated Environment Disclosure Block */}
         <div className="pt-8 border-t border-white/10 space-y-4 text-[11px] text-zinc-400 leading-relaxed">
           <div className="flex items-start gap-2 p-3 rounded-xl bg-white/[0.02] border border-white/5">
-            <AlertTriangle className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+            <AlertTriangle className="w-4 h-4 text-[#00E599] flex-shrink-0 mt-0.5" />
             <div>
               <strong className="text-zinc-200">Simulated Trading Disclosure:</strong> All accounts provided by FundedFlex operate strictly within a simulated demo environment. No real market orders are executed on live financial exchanges. All account balances and performance data represent virtual evaluation credits and do not constitute actual trading deposits or client investment funds.
             </div>
@@ -123,11 +123,11 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-4">
               <span className="flex items-center gap-1">
-                <Lock className="w-3 h-3 text-[#F59E0B]" />
+                <Lock className="w-3 h-3 text-[#00E599]" />
                 AES-256 Encrypted Credentials
               </span>
               <span className="flex items-center gap-1">
-                <Shield className="w-3 h-3 text-[#F59E0B]" />
+                <Shield className="w-3 h-3 text-[#00E599]" />
                 Non-Custodial Crypto Checkout
               </span>
             </div>

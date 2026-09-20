@@ -196,7 +196,7 @@ export default function OrderReviewClient({ initialOrder }: OrderReviewProps) {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
           <div>
-            <span className="text-[10px] font-bold uppercase tracking-widest text-[#F59E0B]">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-[#00E599]">
               ADMIN PAYMENT VERIFICATION
             </span>
             <h1 className="text-2xl font-extrabold text-white mt-1">
@@ -210,9 +210,9 @@ export default function OrderReviewClient({ initialOrder }: OrderReviewProps) {
           <span
             className={`inline-block px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border ${
               order.status === "ACCOUNT_READY" || order.status === "PAYMENT_CONFIRMED"
-                ? "bg-amber-500/10 text-[#F59E0B] border-amber-500/20"
+                ? "bg-[#00E599]/10 text-[#00E599] border-[#00E599]/20"
                 : order.status === "PAYMENT_PENDING_REVIEW"
-                ? "bg-amber-500/10 text-amber-400 border-amber-500/20"
+                ? "bg-[#00E599]/10 text-[#00E599] border-[#00E599]/20"
                 : order.status === "PAYMENT_REJECTED"
                 ? "bg-red-500/10 text-red-400 border-red-500/20"
                 : "bg-zinc-800 text-zinc-300 border-white/10"
@@ -224,7 +224,7 @@ export default function OrderReviewClient({ initialOrder }: OrderReviewProps) {
 
         {/* Feedback alerts */}
         {actionSuccess && (
-          <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[#F59E0B] text-xs flex items-center gap-2">
+          <div className="p-4 rounded-xl bg-[#00E599]/10 border border-[#00E599]/20 text-[#00E599] text-xs flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
             <span>{actionSuccess}</span>
           </div>
@@ -239,8 +239,8 @@ export default function OrderReviewClient({ initialOrder }: OrderReviewProps) {
 
         {/* PROVISIONED CREDENTIALS BANNER */}
         {(generatedCreds || order.credential) && (
-          <div className="p-6 rounded-2xl bg-[#F59E0B]/10 border border-[#F59E0B]/30 text-white space-y-4">
-            <div className="flex items-center gap-2 text-[#F59E0B] font-bold text-sm">
+          <div className="p-6 rounded-2xl bg-[#00E599]/10 border border-[#00E599]/30 text-white space-y-4">
+            <div className="flex items-center gap-2 text-[#00E599] font-bold text-sm">
               <KeyRound className="w-4 h-4" />
               <span>Simulated Trading Account Provisioned</span>
             </div>
@@ -260,7 +260,7 @@ export default function OrderReviewClient({ initialOrder }: OrderReviewProps) {
               </div>
               <div>
                 <span className="text-zinc-500 block text-[10px]">INITIAL PASSWORD</span>
-                <span className="text-[#F59E0B] font-bold">
+                <span className="text-[#00E599] font-bold">
                   {generatedCreds?.rawPassword || "Encrypted at rest"}
                 </span>
               </div>
@@ -312,7 +312,7 @@ export default function OrderReviewClient({ initialOrder }: OrderReviewProps) {
             </div>
             <div className="flex justify-between text-xs">
               <span className="text-zinc-500">Order Amount:</span>
-              <span className="text-[#F59E0B] font-mono font-bold">
+              <span className="text-[#00E599] font-mono font-bold">
                 ${order.amountUSD} USD
               </span>
             </div>
@@ -328,7 +328,7 @@ export default function OrderReviewClient({ initialOrder }: OrderReviewProps) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
             <div>
               <span className="text-zinc-500 block">Expected Crypto:</span>
-              <span className="text-lg font-bold text-[#F59E0B] font-mono mt-0.5 block">
+              <span className="text-lg font-bold text-[#00E599] font-mono mt-0.5 block">
                 {order.expectedCryptoAmount} {order.cryptoAsset}
               </span>
             </div>
@@ -372,7 +372,7 @@ export default function OrderReviewClient({ initialOrder }: OrderReviewProps) {
                     title="Copy Hash"
                   >
                     {copiedHash ? (
-                      <Check className="w-4 h-4 text-[#F59E0B]" />
+                      <Check className="w-4 h-4 text-[#00E599]" />
                     ) : (
                       <Copy className="w-4 h-4" />
                     )}
@@ -382,7 +382,7 @@ export default function OrderReviewClient({ initialOrder }: OrderReviewProps) {
                     href={getExplorerUrl(order.txHash, order.network)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#F59E0B]/10 hover:bg-[#F59E0B]/20 text-[#F59E0B] text-xs font-semibold border border-[#F59E0B]/20"
+                    className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#00E599]/10 hover:bg-[#00E599]/20 text-[#00E599] text-xs font-semibold border border-[#00E599]/20"
                   >
                     <span>Verify on Explorer</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -401,7 +401,7 @@ export default function OrderReviewClient({ initialOrder }: OrderReviewProps) {
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-xs text-zinc-400">
             {order.status === "ACCOUNT_READY" ? (
-              <span className="text-amber-400 font-semibold flex items-center gap-1">
+              <span className="text-[#00E599] font-semibold flex items-center gap-1">
                 <CheckCircle2 className="w-4 h-4" />
                 This order has already been verified and provisioned.
               </span>
@@ -428,7 +428,7 @@ export default function OrderReviewClient({ initialOrder }: OrderReviewProps) {
                   type="button"
                   onClick={handleApprove}
                   disabled={loading}
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-[#F59E0B] hover:bg-[#D97706] text-black font-extrabold text-xs shadow-glow-gold-sm transition-all disabled:opacity-50"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-[#00E599] hover:bg-[#00c784] text-black font-extrabold text-xs shadow-glow-green-sm transition-all disabled:opacity-50"
                 >
                   {loading ? (
                     <>

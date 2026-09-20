@@ -34,7 +34,7 @@ export default async function CheckoutPage({ searchParams }: PageProps) {
     <div className="py-10 md:py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#F59E0B]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#00E599]">
             Instant Crypto Settlement
           </span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white mt-1">

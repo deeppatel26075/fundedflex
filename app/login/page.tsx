@@ -87,7 +87,7 @@ function LoginForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="name@example.com"
-              className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#F59E0B] transition-colors"
+              className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#00E599] transition-colors"
             />
           </div>
         </div>
@@ -106,7 +106,7 @@ function LoginForm() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••••••"
-              className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#F59E0B] transition-colors"
+              className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#00E599] transition-colors"
             />
           </div>
         </div>
@@ -114,7 +114,7 @@ function LoginForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#F59E0B] hover:bg-[#D97706] text-black font-extrabold text-sm shadow-glow-gold-sm transition-all disabled:opacity-50"
+          className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#00E599] hover:bg-[#00c784] text-black font-extrabold text-sm shadow-glow-green-sm transition-all disabled:opacity-50"
         >
           {loading ? (
             <>
@@ -146,7 +146,7 @@ function LoginForm() {
           <button
             type="button"
             onClick={() => handleQuickFill("admin@fundedflex.com", "AdminFlex2026!")}
-            className="px-2.5 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-[11px] text-amber-300 border border-amber-500/20 transition-colors text-center"
+            className="px-2.5 py-1.5 rounded-lg bg-[#00E599]/10 hover:bg-[#00E599]/20 text-[11px] text-[#00FFA3] border border-[#00E599]/20 transition-colors text-center"
           >
             Operations Admin
           </button>
@@ -155,7 +155,7 @@ function LoginForm() {
 
       <div className="text-center text-xs text-zinc-400">
         Don&#39;t have an account?{" "}
-        <Link href="/register" className="text-[#F59E0B] hover:underline font-semibold">
+        <Link href="/register" className="text-[#00E599] hover:underline font-semibold">
           Register now
         </Link>
       </div>

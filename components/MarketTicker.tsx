@@ -27,7 +27,7 @@ export default function MarketTicker() {
             key={idx}
             className="inline-flex items-center gap-2 flex-shrink-0 px-2 group"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00E599] animate-pulse" />
             <span className="font-bold tracking-wider text-zinc-400 group-hover:text-white transition-colors">
               {item.symbol}
             </span>
@@ -37,8 +37,8 @@ export default function MarketTicker() {
             <span
               className={`text-[10px] px-1.5 py-0.5 rounded font-semibold ${
                 item.special
-                  ? "bg-amber-500/15 text-amber-300 border border-amber-500/30"
-                  : "bg-[#F59E0B]/15 text-[#F59E0B] border border-[#F59E0B]/30"
+                  ? "bg-[#00E599]/15 text-[#00FFA3] border border-[#00E599]/30"
+                  : "bg-[#00E599]/15 text-[#00E599] border border-[#00E599]/30"
               }`}
             >
               {item.change}

@@ -66,7 +66,7 @@ export default function RulesMatrix() {
     <section id="rules" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F59E0B]/10 border border-[#F59E0B]/20 text-[#F59E0B] text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00E599]/10 border border-[#00E599]/20 text-[#00E599] text-xs font-semibold uppercase tracking-wider mb-4">
             <ShieldCheck className="w-3.5 h-3.5" />
             Transparent Framework
           </div>
@@ -89,7 +89,7 @@ export default function RulesMatrix() {
                   <span className="px-2 py-0.5 rounded bg-white/5 text-zinc-400 font-medium">
                     {rule.type}
                   </span>
-                  <span className="text-[#F59E0B] flex items-center gap-1 font-semibold text-xs">
+                  <span className="text-[#00E599] flex items-center gap-1 font-semibold text-xs">
                     <Check className="w-3.5 h-3.5" />
                     Verified
                   </span>
@@ -98,7 +98,7 @@ export default function RulesMatrix() {
                 <h3 className="text-base font-bold text-white mb-1">
                   {rule.name}
                 </h3>
-                <div className="text-2xl font-extrabold text-white font-mono my-2 text-[#F59E0B]">
+                <div className="text-2xl font-extrabold text-white font-mono my-2 text-[#00E599]">
                   {rule.value}
                 </div>
                 <p className="text-xs text-zinc-400 leading-relaxed">
@@ -116,7 +116,7 @@ export default function RulesMatrix() {
         {/* Note banner */}
         <div className="mt-10 p-5 rounded-2xl bg-[#0E1315] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-amber-500/10 text-[#F59E0B] flex-shrink-0">
+            <div className="p-2 rounded-lg bg-[#00E599]/10 text-[#00E599] flex-shrink-0">
               <Info className="w-5 h-5" />
             </div>
             <p className="text-xs text-zinc-300">
@@ -125,7 +125,7 @@ export default function RulesMatrix() {
           </div>
           <Link
             href="/rules"
-            className="text-xs font-semibold text-[#F59E0B] hover:underline flex-shrink-0"
+            className="text-xs font-semibold text-[#00E599] hover:underline flex-shrink-0"
           >
             Read Full Rules Documentation →
           </Link>

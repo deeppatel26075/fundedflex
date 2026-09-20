@@ -80,16 +80,16 @@ export default async function AdminOrdersListPage() {
                       <td className="px-6 py-4">
                         ${ord.product.accountSize.toLocaleString()}
                       </td>
-                      <td className="px-6 py-4 font-mono text-[#F59E0B]">
+                      <td className="px-6 py-4 font-mono text-[#00E599]">
                         {ord.expectedCryptoAmount} {ord.cryptoAsset}
                       </td>
                       <td className="px-6 py-4">
                         <span
                           className={`inline-block px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border ${
                             ord.status === "ACCOUNT_READY" || ord.status === "PAYMENT_CONFIRMED"
-                              ? "bg-amber-500/10 text-[#F59E0B] border-amber-500/20"
+                              ? "bg-[#00E599]/10 text-[#00E599] border-[#00E599]/20"
                               : ord.status === "PAYMENT_PENDING_REVIEW"
-                              ? "bg-amber-500/10 text-amber-400 border-amber-500/20"
+                              ? "bg-[#00E599]/10 text-[#00E599] border-[#00E599]/20"
                               : ord.status === "PAYMENT_REJECTED"
                               ? "bg-red-500/10 text-red-400 border-red-500/20"
                               : "bg-zinc-800 text-zinc-300 border-white/10"
@@ -107,7 +107,7 @@ export default async function AdminOrdersListPage() {
                       <td className="px-6 py-4 text-right">
                         <Link
                           href={`/admin/orders/${ord.id}`}
-                          className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-[#F59E0B] hover:text-black text-white text-xs font-semibold transition-all inline-flex items-center gap-1"
+                          className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-[#00E599] hover:text-black text-white text-xs font-semibold transition-all inline-flex items-center gap-1"
                         >
                           <span>Review</span>
                           <ExternalLink className="w-3 h-3" />

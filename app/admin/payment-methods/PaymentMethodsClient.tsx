@@ -66,7 +66,7 @@ export default function PaymentMethodsClient({
     <div className="rounded-3xl bg-[#090D0F] border border-white/10 p-6 sm:p-8 shadow-2xl space-y-6">
       <div>
         <h1 className="text-2xl font-extrabold text-white flex items-center gap-2">
-          <Wallet className="w-6 h-6 text-[#F59E0B]" />
+          <Wallet className="w-6 h-6 text-[#00E599]" />
           Configured Crypto Payment Wallets
         </h1>
         <p className="text-xs text-zinc-400 mt-1">
@@ -75,7 +75,7 @@ export default function PaymentMethodsClient({
       </div>
 
       {successMsg && (
-        <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[#F59E0B] text-xs flex items-center gap-2">
+        <div className="p-4 rounded-xl bg-[#00E599]/10 border border-[#00E599]/20 text-[#00E599] text-xs flex items-center gap-2">
           <Check className="w-4 h-4 flex-shrink-0" />
           <span>{successMsg}</span>
         </div>
@@ -113,7 +113,7 @@ export default function PaymentMethodsClient({
                     onChange={(e) =>
                       handleFieldChange(m.id, "isActive", e.target.checked)
                     }
-                    className="rounded bg-zinc-800 border-zinc-700 text-[#F59E0B] focus:ring-0"
+                    className="rounded bg-zinc-800 border-zinc-700 text-[#00E599] focus:ring-0"
                   />
                   <span className="text-xs text-zinc-400">Accept Payments</span>
                 </label>
@@ -130,7 +130,7 @@ export default function PaymentMethodsClient({
                     handleFieldChange(m.id, "walletAddress", e.target.value)
                   }
                   placeholder="Paste your crypto wallet address"
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#0E1315] border border-white/10 text-white font-mono text-xs focus:outline-none focus:border-[#F59E0B]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#0E1315] border border-white/10 text-white font-mono text-xs focus:outline-none focus:border-[#00E599]"
                 />
               </div>
 
@@ -145,7 +145,7 @@ export default function PaymentMethodsClient({
                     handleFieldChange(m.id, "instructions", e.target.value)
                   }
                   placeholder="e.g. Minimum 1 confirmation. Send only via TRON network."
-                  className="w-full px-3.5 py-2 rounded-xl bg-[#0E1315] border border-white/10 text-zinc-300 text-xs focus:outline-none focus:border-[#F59E0B]"
+                  className="w-full px-3.5 py-2 rounded-xl bg-[#0E1315] border border-white/10 text-zinc-300 text-xs focus:outline-none focus:border-[#00E599]"
                 />
               </div>
 
@@ -154,7 +154,7 @@ export default function PaymentMethodsClient({
                   type="button"
                   onClick={() => handleSave(m)}
                   disabled={isSaving}
-                  className="px-5 py-2 rounded-xl bg-[#F59E0B] hover:bg-[#D97706] text-black font-bold text-xs shadow-glow-gold-sm flex items-center gap-1.5 transition-all disabled:opacity-50"
+                  className="px-5 py-2 rounded-xl bg-[#00E599] hover:bg-[#00c784] text-black font-bold text-xs shadow-glow-green-sm flex items-center gap-1.5 transition-all disabled:opacity-50"
                 >
                   {isSaving ? (
                     <Loader2 className="w-3.5 h-3.5 animate-spin" />

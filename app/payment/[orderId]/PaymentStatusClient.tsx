@@ -66,13 +66,13 @@ export default function PaymentStatusClient({
       case "PAYMENT_CONFIRMED":
         return {
           label: "ACCOUNT READY",
-          bg: "bg-amber-500/10 text-[#F59E0B] border-amber-500/20",
+          bg: "bg-[#00E599]/10 text-[#00E599] border-[#00E599]/20",
           icon: CheckCircle2,
         };
       case "PAYMENT_PENDING_REVIEW":
         return {
           label: "PAYMENT UNDER REVIEW",
-          bg: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+          bg: "bg-[#00E599]/10 text-[#00E599] border-[#00E599]/20",
           icon: Clock,
         };
       case "PAYMENT_SUBMITTED":
@@ -130,7 +130,7 @@ export default function PaymentStatusClient({
             title="Refresh status"
           >
             <RefreshCw
-              className={`w-4 h-4 ${isRefreshing ? "animate-spin text-[#F59E0B]" : ""}`}
+              className={`w-4 h-4 ${isRefreshing ? "animate-spin text-[#00E599]" : ""}`}
             />
           </button>
         </div>
@@ -138,9 +138,9 @@ export default function PaymentStatusClient({
 
       {/* Dynamic Status Callout Banner */}
       {order.status === "ACCOUNT_READY" && (
-        <div className="p-6 rounded-2xl bg-[#F59E0B]/10 border border-[#F59E0B]/30 text-white space-y-4">
+        <div className="p-6 rounded-2xl bg-[#00E599]/10 border border-[#00E599]/30 text-white space-y-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-xl bg-[#F59E0B] text-black">
+            <div className="p-2 rounded-xl bg-[#00E599] text-black">
               <KeyRound className="w-5 h-5" />
             </div>
             <div>
@@ -156,7 +156,7 @@ export default function PaymentStatusClient({
           <div className="pt-2 flex flex-wrap gap-3">
             <Link
               href="/dashboard"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#F59E0B] hover:bg-[#D97706] text-black text-xs font-extrabold shadow-glow-gold-sm transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#00E599] hover:bg-[#00c784] text-black text-xs font-extrabold shadow-glow-green-sm transition-all"
             >
               <span>Open Customer Dashboard</span>
               <ArrowRight className="w-4 h-4" />
@@ -166,8 +166,8 @@ export default function PaymentStatusClient({
       )}
 
       {order.status === "PAYMENT_PENDING_REVIEW" && (
-        <div className="p-6 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-white space-y-2">
-          <div className="flex items-center gap-2 text-amber-300 font-bold text-sm">
+        <div className="p-6 rounded-2xl bg-[#00E599]/10 border border-[#00E599]/20 text-white space-y-2">
+          <div className="flex items-center gap-2 text-[#00FFA3] font-bold text-sm">
             <Clock className="w-4 h-4" />
             Payment In Verification Queue
           </div>
@@ -211,7 +211,7 @@ export default function PaymentStatusClient({
 
           <div>
             <span className="text-zinc-500 block">Required Crypto Amount:</span>
-            <span className="text-[#F59E0B] font-mono font-bold text-sm">
+            <span className="text-[#00E599] font-mono font-bold text-sm">
               {order.expectedCryptoAmount} {order.cryptoAsset}
             </span>
           </div>
@@ -241,7 +241,7 @@ export default function PaymentStatusClient({
                 className="text-zinc-400 hover:text-white flex-shrink-0"
               >
                 {copiedHash ? (
-                  <Check className="w-4 h-4 text-[#F59E0B]" />
+                  <Check className="w-4 h-4 text-[#00E599]" />
                 ) : (
                   <Copy className="w-4 h-4" />
                 )}
@@ -261,7 +261,7 @@ export default function PaymentStatusClient({
         </Link>
         <Link
           href="/accounts"
-          className="text-[#F59E0B] hover:underline font-semibold"
+          className="text-[#00E599] hover:underline font-semibold"
         >
           Browse Other Accounts →
         </Link>

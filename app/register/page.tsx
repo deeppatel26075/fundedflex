@@ -78,7 +78,7 @@ export default function RegisterPage() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Alex Vance"
-                className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#F59E0B] transition-colors"
+                className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#00E599] transition-colors"
               />
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function RegisterPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@example.com"
-                className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#F59E0B] transition-colors"
+                className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#00E599] transition-colors"
               />
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function RegisterPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••••••"
-                className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#F59E0B] transition-colors"
+                className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#00E599] transition-colors"
               />
             </div>
           </div>
@@ -125,7 +125,7 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#F59E0B] hover:bg-[#D97706] text-black font-extrabold text-sm shadow-glow-gold-sm transition-all disabled:opacity-50"
+            className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#00E599] hover:bg-[#00c784] text-black font-extrabold text-sm shadow-glow-green-sm transition-all disabled:opacity-50"
           >
             {loading ? (
               <>
@@ -143,7 +143,7 @@ export default function RegisterPage() {
 
         <div className="text-center text-xs text-zinc-400">
           Already have an account?{" "}
-          <Link href="/login" className="text-[#F59E0B] hover:underline font-semibold">
+          <Link href="/login" className="text-[#00E599] hover:underline font-semibold">
             Sign in
           </Link>
         </div>

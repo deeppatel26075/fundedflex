@@ -33,7 +33,7 @@ export default function HowItWorks() {
     <section id="how-it-works" className="py-20 relative bg-[#070A0B] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#F59E0B]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#00E599]">
             Simplicity & Precision
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-2">
@@ -50,19 +50,19 @@ export default function HowItWorks() {
             return (
               <div
                 key={idx}
-                className="relative rounded-2xl bg-[#0B0F11] border border-white/10 p-6 flex flex-col justify-between hover:border-[#F59E0B]/30 transition-all duration-300 group"
+                className="relative rounded-2xl bg-[#0B0F11] border border-white/10 p-6 flex flex-col justify-between hover:border-[#00E599]/30 transition-all duration-300 group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-3xl font-extrabold font-mono text-zinc-600 group-hover:text-[#F59E0B] transition-colors">
+                    <span className="text-3xl font-extrabold font-mono text-zinc-600 group-hover:text-[#00E599] transition-colors">
                       {s.num}
                     </span>
-                    <div className="p-2.5 rounded-xl bg-white/5 group-hover:bg-[#F59E0B]/10 text-zinc-300 group-hover:text-[#F59E0B] transition-colors">
+                    <div className="p-2.5 rounded-xl bg-white/5 group-hover:bg-[#00E599]/10 text-zinc-300 group-hover:text-[#00E599] transition-colors">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#F59E0B] transition-colors">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#00E599] transition-colors">
                     {s.title}
                   </h3>
                   <p className="text-xs text-zinc-400 leading-relaxed">
@@ -71,7 +71,7 @@ export default function HowItWorks() {
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-1.5 text-[11px] text-zinc-500">
-                  <CheckCircle className="w-3.5 h-3.5 text-[#F59E0B]" />
+                  <CheckCircle className="w-3.5 h-3.5 text-[#00E599]" />
                   <span>Phase {s.num} Milestones</span>
                 </div>
               </div>

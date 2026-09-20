@@ -72,7 +72,7 @@ export default function ProductManagerClient({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl font-extrabold text-white flex items-center gap-2">
-            <Layers className="w-6 h-6 text-[#F59E0B]" />
+            <Layers className="w-6 h-6 text-[#00E599]" />
             Product Tiers & Central Rules Configurator
           </h1>
           <p className="text-xs text-zinc-400 mt-1">
@@ -82,7 +82,7 @@ export default function ProductManagerClient({
       </div>
 
       {successMsg && (
-        <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[#F59E0B] text-xs flex items-center gap-2">
+        <div className="p-4 rounded-xl bg-[#00E599]/10 border border-[#00E599]/20 text-[#00E599] text-xs flex items-center gap-2">
           <Check className="w-4 h-4 flex-shrink-0" />
           <span>{successMsg}</span>
         </div>
@@ -158,7 +158,7 @@ export default function ProductManagerClient({
                   type="button"
                   onClick={() => handleSave(prod)}
                   disabled={isSaving}
-                  className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-[#F59E0B] hover:bg-[#D97706] text-black font-extrabold text-xs shadow-glow-gold-sm flex items-center justify-center gap-1.5 transition-all disabled:opacity-50"
+                  className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-[#00E599] hover:bg-[#00c784] text-black font-extrabold text-xs shadow-glow-green-sm flex items-center justify-center gap-1.5 transition-all disabled:opacity-50"
                 >
                   {isSaving ? (
                     <Loader2 className="w-3.5 h-3.5 animate-spin" />

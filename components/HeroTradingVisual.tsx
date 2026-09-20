@@ -35,9 +35,9 @@ export default function HeroTradingVisual() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto rounded-3xl p-[1px] bg-gradient-to-b from-[#F59E0B]/40 via-white/10 to-transparent shadow-[0_25px_70px_-15px_rgba(0,0,0,0.9)] animate-float">
+    <div className="relative w-full max-w-2xl mx-auto rounded-3xl p-[1px] bg-gradient-to-b from-[#00E599]/40 via-white/10 to-transparent shadow-[0_25px_70px_-15px_rgba(0,0,0,0.9)] animate-float">
       {/* Outer ambient glow behind card */}
-      <div className="absolute -inset-1 bg-gradient-to-r from-[#F59E0B]/20 to-amber-600/10 rounded-3xl blur-xl opacity-70 pointer-events-none" />
+      <div className="absolute -inset-1 bg-gradient-to-r from-[#00E599]/20 to-emerald-600/10 rounded-3xl blur-xl opacity-70 pointer-events-none" />
 
       {/* Main Terminal Container */}
       <div className="relative rounded-[23px] bg-[#070B0D]/95 border border-white/10 backdrop-blur-2xl overflow-hidden">
@@ -45,14 +45,14 @@ export default function HeroTradingVisual() {
         <div className="px-6 py-4 border-b border-white/10 bg-[#040608]/90 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <div className="relative flex items-center justify-center">
-              <span className="w-3 h-3 rounded-full bg-[#F59E0B] animate-ping absolute" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[#F59E0B] relative" />
+              <span className="w-3 h-3 rounded-full bg-[#00E599] animate-ping absolute" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[#00E599] relative" />
             </div>
             <div className="flex items-center gap-2">
               <span className="text-xs font-mono font-bold text-white tracking-wider">
                 PORTFOLIO #FF-100842
               </span>
-              <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#F59E0B]/15 text-[#F59E0B] border border-[#F59E0B]/40 shadow-glow-gold-sm">
+              <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#00E599]/15 text-[#00E599] border border-[#00E599]/40 shadow-glow-green-sm">
                 $100K ELITE TIER
               </span>
             </div>
@@ -79,7 +79,7 @@ export default function HeroTradingVisual() {
                 <span className="text-3xl sm:text-4xl font-extrabold text-white font-mono tracking-tight drop-shadow-md">
                   $104,820.00
                 </span>
-                <span className="inline-flex items-center gap-1 text-xs font-bold text-[#F59E0B] bg-[#F59E0B]/10 px-2.5 py-1 rounded-full border border-[#F59E0B]/30">
+                <span className="inline-flex items-center gap-1 text-xs font-bold text-[#00E599] bg-[#00E599]/10 px-2.5 py-1 rounded-full border border-[#00E599]/30">
                   <ArrowUpRight className="w-3.5 h-3.5" />
                   +$4,820.00 (+4.82%)
                 </span>
@@ -91,7 +91,7 @@ export default function HeroTradingVisual() {
                 Target Objective Progress
               </span>
               <div className="flex items-center gap-2 mt-1 sm:justify-end">
-                <span className="text-xl font-bold font-mono text-[#F59E0B]">
+                <span className="text-xl font-bold font-mono text-[#00E599]">
                   82%
                 </span>
                 <span className="text-xs text-zinc-400 font-mono">
@@ -104,7 +104,7 @@ export default function HeroTradingVisual() {
           {/* Luxury Multi-Color Progress Bar */}
           <div className="w-full bg-[#141C20] h-2 rounded-full mt-4 p-[1px] border border-white/5">
             <div
-              className="bg-gradient-to-r from-amber-400 via-[#F59E0B] to-amber-300 h-full rounded-full shadow-[0_0_12px_#F59E0B] transition-all duration-1000"
+              className="bg-gradient-to-r from-[#00FFA3] via-[#00E599] to-[#00FFA3] h-full rounded-full shadow-[0_0_12px_#00E599] transition-all duration-1000"
               style={{ width: "82%" }}
             />
           </div>
@@ -116,7 +116,7 @@ export default function HeroTradingVisual() {
             <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider block">
               Simulated Profit
             </span>
-            <span className="text-lg font-bold text-[#F59E0B] font-mono mt-0.5 block">
+            <span className="text-lg font-bold text-[#00E599] font-mono mt-0.5 block">
               +$4,820.00
             </span>
             <span className="text-[10px] text-zinc-500 font-mono">Closed & Verified</span>
@@ -130,7 +130,7 @@ export default function HeroTradingVisual() {
               <span className="text-lg font-bold text-white font-mono">1.24%</span>
               <span className="text-[11px] text-zinc-500 font-mono">/ 5.0%</span>
             </div>
-            <span className="text-[10px] text-amber-400 font-mono font-medium">
+            <span className="text-[10px] text-[#00E599] font-mono font-medium">
               3.76% buffer left
             </span>
           </div>
@@ -143,7 +143,7 @@ export default function HeroTradingVisual() {
               <span className="text-lg font-bold text-white font-mono">3.18%</span>
               <span className="text-[11px] text-zinc-500 font-mono">/ 10.0%</span>
             </div>
-            <span className="text-[10px] text-amber-400 font-mono font-medium">
+            <span className="text-[10px] text-[#00E599] font-mono font-medium">
               6.82% safe limit
             </span>
           </div>
@@ -155,7 +155,7 @@ export default function HeroTradingVisual() {
             <span className="text-lg font-bold text-white font-mono mt-0.5 block">
               Up to 90%
             </span>
-            <span className="text-[10px] text-[#F59E0B] font-mono font-medium">
+            <span className="text-[10px] text-[#00E599] font-mono font-medium">
               Elite Profit Tier
             </span>
           </div>
@@ -170,7 +170,7 @@ export default function HeroTradingVisual() {
                 onClick={() => setActiveTab("equity")}
                 className={`px-3.5 py-1.5 text-xs font-bold rounded-xl transition-all ${
                   activeTab === "equity"
-                    ? "bg-[#F59E0B] text-black shadow-glow-gold-sm"
+                    ? "bg-[#00E599] text-black shadow-glow-green-sm"
                     : "bg-white/5 text-zinc-400 hover:text-white"
                 }`}
               >
@@ -181,7 +181,7 @@ export default function HeroTradingVisual() {
                 onClick={() => setActiveTab("candles")}
                 className={`px-3.5 py-1.5 text-xs font-bold rounded-xl transition-all ${
                   activeTab === "candles"
-                    ? "bg-[#F59E0B] text-black shadow-glow-gold-sm"
+                    ? "bg-[#00E599] text-black shadow-glow-green-sm"
                     : "bg-white/5 text-zinc-400 hover:text-white"
                 }`}
               >
@@ -190,7 +190,7 @@ export default function HeroTradingVisual() {
             </div>
 
             <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
-              <span className="w-2 h-2 rounded-full bg-[#F59E0B] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#00E599] animate-pulse" />
               <span>EUR/USD • TICK STREAM LIVE</span>
             </div>
           </div>
@@ -207,9 +207,9 @@ export default function HeroTradingVisual() {
               >
                 <defs>
                   <linearGradient id="luxuryGoldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#F59E0B" stopOpacity="0.4" />
+                    <stop offset="0%" stopColor="#00E599" stopOpacity="0.4" />
                     <stop offset="60%" stopColor="#10B981" stopOpacity="0.1" />
-                    <stop offset="100%" stopColor="#F59E0B" stopOpacity="0.0" />
+                    <stop offset="100%" stopColor="#00E599" stopOpacity="0.0" />
                   </linearGradient>
                 </defs>
                 <path
@@ -219,10 +219,10 @@ export default function HeroTradingVisual() {
                 <path
                   d="M 0 135 Q 70 120 140 100 T 270 65 T 390 35 L 500 15"
                   fill="none"
-                  stroke="#F59E0B"
+                  stroke="#00E599"
                   strokeWidth="3.5"
                   strokeLinecap="round"
-                  filter="drop-shadow(0 0 8px rgba(245, 158, 11, 0.6))"
+                  filter="drop-shadow(0 0 8px rgba(0, 229, 153, 0.6))"
                 />
                 {/* Milestone threshold */}
                 <line
@@ -234,7 +234,7 @@ export default function HeroTradingVisual() {
                   strokeDasharray="5 5"
                   strokeWidth="1.5"
                 />
-                <text x="10" y="18" fill="#F59E0B" fontSize="10" fontFamily="monospace" fontWeight="bold">
+                <text x="10" y="18" fill="#00E599" fontSize="10" fontFamily="monospace" fontWeight="bold">
                   ★ PHASE 1 TARGET: $108,000.00
                 </text>
               </svg>
@@ -249,13 +249,13 @@ export default function HeroTradingVisual() {
                       className="flex flex-col items-center justify-end h-full w-8 group relative"
                     >
                       <div
-                        className={`w-[1.5px] ${isBullish ? "bg-[#F59E0B]" : "bg-red-400"}`}
+                        className={`w-[1.5px] ${isBullish ? "bg-[#00E599]" : "bg-red-400"}`}
                         style={{ height: "75%" }}
                       />
                       <div
                         className={`w-4 rounded-[3px] -mt-7 transition-all duration-300 ${
                           isBullish
-                            ? "bg-gradient-to-t from-amber-600 to-[#F59E0B] shadow-[0_0_10px_#F59E0B]"
+                            ? "bg-gradient-to-t from-emerald-600 to-[#00E599] shadow-[0_0_10px_#00E599]"
                             : "bg-red-500"
                         }`}
                         style={{ height: `${height}%` }}
@@ -272,16 +272,16 @@ export default function HeroTradingVisual() {
 
           {/* Dynamic Live Trade Execution Popup (Wealth / High-Action Feel) */}
           <div
-            className={`mt-4 p-3 rounded-xl bg-[#090E11] border border-[#F59E0B]/30 flex items-center justify-between gap-3 text-xs transition-opacity duration-500 ${
+            className={`mt-4 p-3 rounded-xl bg-[#090E11] border border-[#00E599]/30 flex items-center justify-between gap-3 text-xs transition-opacity duration-500 ${
               showLiveNotification ? "opacity-100" : "opacity-75"
             }`}
           >
             <div className="flex items-center gap-2">
-              <span className="p-1 rounded-md bg-[#F59E0B]/20 text-[#F59E0B]">
+              <span className="p-1 rounded-md bg-[#00E599]/20 text-[#00E599]">
                 <Zap className="w-3.5 h-3.5" />
               </span>
               <span className="text-zinc-200">
-                <strong className="text-white">Simulated Execution:</strong> Buy 2.0 Lots XAU/USD (Gold) closed at <span className="text-[#F59E0B] font-mono font-bold">+$1,420.00</span>
+                <strong className="text-white">Simulated Execution:</strong> Buy 2.0 Lots XAU/USD (Gold) closed at <span className="text-[#00E599] font-mono font-bold">+$1,420.00</span>
               </span>
             </div>
             <span className="text-[10px] text-zinc-500 font-mono flex-shrink-0">

@@ -199,7 +199,7 @@ export default function CheckoutClient({
         {step === "DETAILS" && (
           <div className="rounded-2xl bg-[#090D0F] border border-white/10 p-6 sm:p-8 shadow-xl">
             <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-              <span className="w-6 h-6 rounded-full bg-[#F59E0B] text-black font-extrabold text-xs flex items-center justify-center">
+              <span className="w-6 h-6 rounded-full bg-[#00E599] text-black font-extrabold text-xs flex items-center justify-center">
                 1
               </span>
               Trader Details & Account Selection
@@ -228,7 +228,7 @@ export default function CheckoutClient({
                         onClick={() => setSelectedProduct(p)}
                         className={`py-2.5 px-2 rounded-xl text-xs font-bold transition-all ${
                           isSelected
-                            ? "bg-[#F59E0B] text-black shadow-glow-gold-sm scale-[1.02]"
+                            ? "bg-[#00E599] text-black shadow-glow-green-sm scale-[1.02]"
                             : "bg-[#050707] border border-white/10 text-zinc-300 hover:text-white hover:border-white/20"
                         }`}
                       >
@@ -251,7 +251,7 @@ export default function CheckoutClient({
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     placeholder="Alex Vance"
-                    className="w-full px-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#F59E0B] transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#00E599] transition-colors"
                   />
                 </div>
 
@@ -265,7 +265,7 @@ export default function CheckoutClient({
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="alex@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#F59E0B] transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-[#00E599] transition-colors"
                   />
                 </div>
               </div>
@@ -285,7 +285,7 @@ export default function CheckoutClient({
                         onClick={() => setSelectedMethod(method)}
                         className={`p-3 rounded-xl text-left border transition-all ${
                           isSelected
-                            ? "bg-[#F59E0B]/10 border-[#F59E0B] text-white shadow-glow-gold-sm"
+                            ? "bg-[#00E599]/10 border-[#00E599] text-white shadow-glow-green-sm"
                             : "bg-[#050707] border-white/10 text-zinc-400 hover:text-white hover:border-white/20"
                         }`}
                       >
@@ -309,7 +309,7 @@ export default function CheckoutClient({
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-[#F59E0B] hover:bg-[#D97706] text-black font-extrabold text-sm shadow-glow-gold transition-all disabled:opacity-50"
+                className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-[#00E599] hover:bg-[#00c784] text-black font-extrabold text-sm shadow-glow-green transition-all disabled:opacity-50"
               >
                 {loading ? (
                   <>
@@ -332,7 +332,7 @@ export default function CheckoutClient({
           <div className="rounded-2xl bg-[#090D0F] border border-white/10 p-6 sm:p-8 shadow-2xl space-y-6">
             <div className="flex items-center justify-between pb-4 border-b border-white/10">
               <div className="flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-[#F59E0B] text-black font-extrabold text-xs flex items-center justify-center">
+                <span className="w-6 h-6 rounded-full bg-[#00E599] text-black font-extrabold text-xs flex items-center justify-center">
                   2
                 </span>
                 <h2 className="text-xl font-bold text-white">
@@ -377,7 +377,7 @@ export default function CheckoutClient({
                     Exact Amount to Send:
                   </span>
                   <div className="flex items-center justify-between gap-2 mt-1">
-                    <span className="text-2xl font-extrabold text-[#F59E0B] font-mono">
+                    <span className="text-2xl font-extrabold text-[#00E599] font-mono">
                       {getExpectedAmount()} {selectedMethod?.asset}
                     </span>
                     <button
@@ -387,7 +387,7 @@ export default function CheckoutClient({
                     >
                       {copiedAmount ? (
                         <>
-                          <Check className="w-3.5 h-3.5 text-[#F59E0B]" />
+                          <Check className="w-3.5 h-3.5 text-[#00E599]" />
                           <span>Copied</span>
                         </>
                       ) : (
@@ -417,7 +417,7 @@ export default function CheckoutClient({
                       className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-white transition-colors flex-shrink-0"
                     >
                       {copiedAddress ? (
-                        <Check className="w-4 h-4 text-[#F59E0B]" />
+                        <Check className="w-4 h-4 text-[#00E599]" />
                       ) : (
                         <Copy className="w-4 h-4" />
                       )}
@@ -426,7 +426,7 @@ export default function CheckoutClient({
                 </div>
 
                 {selectedMethod?.instructions && (
-                  <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-300 text-[11px] flex items-start gap-2">
+                  <div className="p-3 rounded-xl bg-[#00E599]/10 border border-[#00E599]/20 text-[#00FFA3] text-[11px] flex items-start gap-2">
                     <Info className="w-4 h-4 flex-shrink-0 mt-0.5" />
                     <span>{selectedMethod.instructions}</span>
                   </div>
@@ -446,7 +446,7 @@ export default function CheckoutClient({
                   value={txHash}
                   onChange={(e) => setTxHash(e.target.value)}
                   placeholder="Paste transaction hash e.g. 0x82f93a... or Tronscan hash"
-                  className="w-full px-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white font-mono text-xs placeholder-zinc-600 focus:outline-none focus:border-[#F59E0B] transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-[#050707] border border-white/10 text-white font-mono text-xs placeholder-zinc-600 focus:outline-none focus:border-[#00E599] transition-colors"
                 />
                 <span className="text-[11px] text-zinc-500 mt-1 block">
                   Found in your withdrawal receipt or wallet history.
@@ -454,7 +454,7 @@ export default function CheckoutClient({
               </div>
 
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex items-center gap-3">
-                <Clock className="w-5 h-5 text-amber-400 flex-shrink-0" />
+                <Clock className="w-5 h-5 text-[#00E599] flex-shrink-0" />
                 <p className="text-xs text-zinc-400">
                   Clicking <strong>&ldquo;I Have Paid&rdquo;</strong> submits your transaction for administrative review. Account credentials are provisioned once verified.
                 </p>
@@ -463,7 +463,7 @@ export default function CheckoutClient({
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-[#F59E0B] hover:bg-[#D97706] text-black font-extrabold text-sm shadow-glow-gold transition-all disabled:opacity-50"
+                className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-[#00E599] hover:bg-[#00c784] text-black font-extrabold text-sm shadow-glow-green transition-all disabled:opacity-50"
               >
                 {loading ? (
                   <>
@@ -484,12 +484,12 @@ export default function CheckoutClient({
         {/* STEP 3: SUBMISSION COMPLETE / UNDER REVIEW */}
         {step === "SUBMITTED" && (
           <div className="rounded-2xl bg-[#090D0F] border border-white/10 p-8 text-center space-y-6 shadow-2xl">
-            <div className="w-16 h-16 rounded-full bg-[#F59E0B]/10 border border-[#F59E0B]/30 text-[#F59E0B] flex items-center justify-center mx-auto shadow-glow-gold-sm">
+            <div className="w-16 h-16 rounded-full bg-[#00E599]/10 border border-[#00E599]/30 text-[#00E599] flex items-center justify-center mx-auto shadow-glow-green-sm">
               <Clock className="w-8 h-8 animate-pulse" />
             </div>
 
             <div>
-              <span className="px-3 py-1 rounded-full text-xs font-bold uppercase bg-amber-500/10 text-amber-400 border border-amber-500/20">
+              <span className="px-3 py-1 rounded-full text-xs font-bold uppercase bg-[#00E599]/10 text-[#00E599] border border-[#00E599]/20">
                 PAYMENT PENDING REVIEW
               </span>
               <h2 className="text-2xl font-extrabold text-white mt-3">
@@ -507,7 +507,7 @@ export default function CheckoutClient({
               </div>
               <div className="flex justify-between text-zinc-400">
                 <span>Expected Amount:</span>
-                <span className="text-[#F59E0B] font-mono font-medium">
+                <span className="text-[#00E599] font-mono font-medium">
                   {getExpectedAmount()} {selectedMethod?.asset}
                 </span>
               </div>
@@ -527,7 +527,7 @@ export default function CheckoutClient({
               <button
                 type="button"
                 onClick={() => router.push(`/payment/${orderId}`)}
-                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#F59E0B] text-black font-bold text-xs shadow-glow-gold-sm hover:bg-[#D97706] transition-all"
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#00E599] text-black font-bold text-xs shadow-glow-green-sm hover:bg-[#00c784] transition-all"
               >
                 Track Live Order Status →
               </button>
@@ -547,7 +547,7 @@ export default function CheckoutClient({
       <div className="lg:col-span-5 rounded-2xl bg-[#080B0C] border border-white/10 p-6 sm:p-8 space-y-6 shadow-xl sticky top-28">
         <h3 className="text-base font-bold text-white uppercase tracking-wider flex items-center justify-between">
           <span>Order Summary</span>
-          <span className="text-xs text-[#F59E0B] font-normal lowercase">
+          <span className="text-xs text-[#00E599] font-normal lowercase">
             simulated tier
           </span>
         </h3>
@@ -582,7 +582,7 @@ export default function CheckoutClient({
           </div>
           <div className="flex justify-between text-zinc-400">
             <span>Payment Method:</span>
-            <span className="text-[#F59E0B] font-bold">
+            <span className="text-[#00E599] font-bold">
               Crypto Only ({selectedMethod?.asset} {selectedMethod?.network})
             </span>
           </div>
@@ -595,11 +595,11 @@ export default function CheckoutClient({
         {/* Security Pillars */}
         <div className="space-y-2 text-[11px] text-zinc-400">
           <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-[#F59E0B]" />
+            <ShieldCheck className="w-4 h-4 text-[#00E599]" />
             <span>Strict manual on-chain review for complete security</span>
           </div>
           <div className="flex items-center gap-2">
-            <Zap className="w-4 h-4 text-[#F59E0B]" />
+            <Zap className="w-4 h-4 text-[#00E599]" />
             <span>Automated credential generation upon approval</span>
           </div>
         </div>

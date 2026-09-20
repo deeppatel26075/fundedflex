@@ -88,7 +88,7 @@ export default async function AdminDashboardPage() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-3xl bg-[#090D0F] border border-white/10 shadow-2xl">
           <div>
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-300 border border-amber-500/20">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#00E599]/10 text-[#00FFA3] border border-[#00E599]/20">
                 Operations Desk
               </span>
             </div>
@@ -128,7 +128,7 @@ export default async function AdminDashboardPage() {
             <span className="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider block">
               Pending Reviews
             </span>
-            <div className="text-2xl font-extrabold text-amber-400 font-mono mt-1">
+            <div className="text-2xl font-extrabold text-[#00E599] font-mono mt-1">
               {pendingOrders}
             </div>
             <span className="text-[11px] text-zinc-500 mt-0.5 block">Requires desk action</span>
@@ -138,7 +138,7 @@ export default async function AdminDashboardPage() {
             <span className="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider block">
               Active Accounts
             </span>
-            <div className="text-2xl font-extrabold text-[#F59E0B] font-mono mt-1">
+            <div className="text-2xl font-extrabold text-[#00E599] font-mono mt-1">
               {activeAccounts}
             </div>
             <span className="text-[11px] text-zinc-500 mt-0.5 block">Provisioned & live</span>
@@ -168,7 +168,7 @@ export default async function AdminDashboardPage() {
             <span className="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider block">
               Gross Volume
             </span>
-            <div className="text-2xl font-extrabold text-[#F59E0B] font-mono mt-1">
+            <div className="text-2xl font-extrabold text-[#00E599] font-mono mt-1">
               ${totalRevenue.toLocaleString()}
             </div>
             <span className="text-[11px] text-zinc-500 mt-0.5 block">USD collected</span>
@@ -179,7 +179,7 @@ export default async function AdminDashboardPage() {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-bold text-white flex items-center gap-2">
-              <Clock className="w-5 h-5 text-amber-400" />
+              <Clock className="w-5 h-5 text-[#00E599]" />
               Pending Payment Approvals ({pendingOrders})
             </h2>
           </div>
@@ -218,21 +218,21 @@ export default async function AdminDashboardPage() {
                           </span>
                         </td>
                         <td className="px-6 py-4">{ord.product.name}</td>
-                        <td className="px-6 py-4 font-mono font-bold text-[#F59E0B]">
+                        <td className="px-6 py-4 font-mono font-bold text-[#00E599]">
                           {ord.expectedCryptoAmount} {ord.cryptoAsset} ({ord.network})
                         </td>
                         <td className="px-6 py-4 font-mono text-[11px] text-zinc-400 max-w-[150px] truncate">
                           {ord.txHash || "Awaiting hash"}
                         </td>
                         <td className="px-6 py-4">
-                          <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                          <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-[#00E599]/10 text-[#00FFA3] border border-[#00E599]/20">
                             {ord.status}
                           </span>
                         </td>
                         <td className="px-6 py-4 text-right">
                           <Link
                             href={`/admin/orders/${ord.id}`}
-                            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#F59E0B] hover:bg-[#D97706] text-black text-xs font-bold shadow-glow-gold-sm transition-all"
+                            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#00E599] hover:bg-[#00c784] text-black text-xs font-bold shadow-glow-green-sm transition-all"
                           >
                             <span>Review & Verify</span>
                             <ArrowRight className="w-3.5 h-3.5" />
@@ -253,7 +253,7 @@ export default async function AdminDashboardPage() {
             <h2 className="text-lg font-bold text-white">Recent System Orders</h2>
             <Link
               href="/admin/orders"
-              className="text-xs text-[#F59E0B] hover:underline font-semibold"
+              className="text-xs text-[#00E599] hover:underline font-semibold"
             >
               View Full History →
             </Link>
@@ -293,9 +293,9 @@ export default async function AdminDashboardPage() {
                         <span
                           className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border ${
                             ord.status === "ACCOUNT_READY" || ord.status === "PAYMENT_CONFIRMED"
-                              ? "bg-amber-500/10 text-[#F59E0B] border-amber-500/20"
+                              ? "bg-[#00E599]/10 text-[#00E599] border-[#00E599]/20"
                               : ord.status === "PAYMENT_PENDING_REVIEW"
-                              ? "bg-amber-500/10 text-amber-400 border-amber-500/20"
+                              ? "bg-[#00E599]/10 text-[#00E599] border-[#00E599]/20"
                               : ord.status === "PAYMENT_REJECTED"
                               ? "bg-red-500/10 text-red-400 border-red-500/20"
                               : "bg-zinc-800 text-zinc-300 border-white/10"

@@ -5,7 +5,7 @@ export default function RiskDisclosurePage() {
   return (
     <div className="py-12 md:py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-xs text-zinc-300 leading-relaxed">
       <div>
-        <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
+        <span className="text-xs font-bold uppercase tracking-widest text-[#00E599]">
           Regulatory Notices
         </span>
         <h1 className="text-3xl font-extrabold text-white mt-1">
@@ -15,7 +15,7 @@ export default function RiskDisclosurePage() {
       </div>
 
       <div className="p-8 rounded-3xl bg-[#090D0F] border border-white/10 space-y-6 shadow-xl">
-        <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs flex items-start gap-3">
+        <div className="p-4 rounded-xl bg-[#00E599]/10 border border-[#00E599]/20 text-[#00FFA3] text-xs flex items-start gap-3">
           <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" />
           <div>
             <strong className="block text-white mb-1">General High-Risk Warning:</strong>

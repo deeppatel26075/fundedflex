@@ -80,7 +80,7 @@ export default function Navbar({ user }: NavbarProps) {
                 {user.role === "ADMIN" && (
                   <Link
                     href="/admin"
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider text-amber-300 bg-amber-500/15 border border-amber-500/30 hover:bg-amber-500/25 transition-colors"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider text-[#00FFA3] bg-[#00E599]/15 border border-[#00E599]/30 hover:bg-amber-500/25 transition-colors"
                   >
                     <ShieldCheck className="w-3.5 h-3.5" />
                     Admin
@@ -90,7 +90,7 @@ export default function Navbar({ user }: NavbarProps) {
                   href="/dashboard"
                   className="flex items-center gap-2 px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-zinc-800/90 hover:bg-zinc-700 border border-white/10 transition-colors shadow-md"
                 >
-                  <LayoutDashboard className="w-4 h-4 text-[#F59E0B]" />
+                  <LayoutDashboard className="w-4 h-4 text-[#00E599]" />
                   Dashboard
                 </Link>
               </div>
@@ -119,7 +119,7 @@ export default function Navbar({ user }: NavbarProps) {
             {user && (
               <Link
                 href="/dashboard"
-                className="p-2 rounded-lg bg-zinc-800/80 text-[#F59E0B] border border-white/10"
+                className="p-2 rounded-lg bg-zinc-800/80 text-[#00E599] border border-white/10"
               >
                 <LayoutDashboard className="w-4 h-4" />
               </Link>
@@ -144,7 +144,7 @@ export default function Navbar({ user }: NavbarProps) {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-3 rounded-xl text-sm font-semibold text-zinc-200 hover:text-amber-300 hover:bg-white/5 transition-colors"
+                className="px-4 py-3 rounded-xl text-sm font-semibold text-zinc-200 hover:text-[#00FFA3] hover:bg-white/5 transition-colors"
               >
                 {link.label}
               </Link>
@@ -158,14 +158,14 @@ export default function Navbar({ user }: NavbarProps) {
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-zinc-800 text-white font-bold text-xs uppercase border border-white/10"
                   >
-                    <LayoutDashboard className="w-4 h-4 text-[#F59E0B]" />
+                    <LayoutDashboard className="w-4 h-4 text-[#00E599]" />
                     Trader Dashboard
                   </Link>
                   {user.role === "ADMIN" && (
                     <Link
                       href="/admin"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-amber-500/15 text-amber-300 border border-amber-500/30 font-bold text-xs uppercase"
+                      className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-[#00E599]/15 text-[#00FFA3] border border-[#00E599]/30 font-bold text-xs uppercase"
                     >
                       <ShieldCheck className="w-4 h-4" />
                       Admin Operations

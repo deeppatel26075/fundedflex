@@ -49,11 +49,11 @@ export default async function AccountDetailPage({ params }: PageProps) {
 
         {/* Main Product Header Card */}
         <div className="rounded-3xl bg-[#0A0E10] border border-white/10 p-6 sm:p-10 shadow-2xl relative overflow-hidden mb-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#00E599]/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-white/10">
             <div>
-              <span className="inline-block px-3 py-1 rounded-full bg-[#F59E0B]/10 text-[#F59E0B] text-xs font-bold uppercase tracking-wider mb-2 border border-[#F59E0B]/20">
+              <span className="inline-block px-3 py-1 rounded-full bg-[#00E599]/10 text-[#00E599] text-xs font-bold uppercase tracking-wider mb-2 border border-[#00E599]/20">
                 Simulated Evaluation Tier
               </span>
               <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
@@ -74,12 +74,12 @@ export default async function AccountDetailPage({ params }: PageProps) {
                   USD
                 </span>
               </div>
-              <span className="text-xs text-[#F59E0B] font-medium mt-1">
+              <span className="text-xs text-[#00E599] font-medium mt-1">
                 Crypto Settlement Available
               </span>
               <Link
                 href={`/checkout?plan=${product.slug}`}
-                className="mt-4 inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#F59E0B] hover:bg-[#D97706] text-black font-extrabold text-sm shadow-glow-gold-sm transition-all"
+                className="mt-4 inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#00E599] hover:bg-[#00c784] text-black font-extrabold text-sm shadow-glow-green-sm transition-all"
               >
                 <span>Get This Account</span>
                 <ArrowRight className="w-4 h-4" />
@@ -119,7 +119,7 @@ export default async function AccountDetailPage({ params }: PageProps) {
 
             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
               <span className="text-xs text-zinc-400 block">Profit Target</span>
-              <span className="text-xl font-bold text-[#F59E0B] font-mono mt-1 block">
+              <span className="text-xl font-bold text-[#00E599] font-mono mt-1 block">
                 {product.profitTarget}%
               </span>
               <span className="text-[11px] text-zinc-500 font-mono">
@@ -140,23 +140,23 @@ export default async function AccountDetailPage({ params }: PageProps) {
             </div>
             <div className="flex justify-between py-2 border-b border-white/5">
               <span className="text-zinc-400">Simulated Reward Split:</span>
-              <span className="text-[#F59E0B] font-semibold">{product.rewardSplit}</span>
+              <span className="text-[#00E599] font-semibold">{product.rewardSplit}</span>
             </div>
             <div className="flex justify-between py-2 border-b border-white/5">
               <span className="text-zinc-400">Weekend Holding:</span>
-              <span className="text-[#F59E0B] font-medium flex items-center gap-1">
+              <span className="text-[#00E599] font-medium flex items-center gap-1">
                 <Check className="w-3.5 h-3.5" /> Allowed
               </span>
             </div>
             <div className="flex justify-between py-2 border-b border-white/5">
               <span className="text-zinc-400">News Trading:</span>
-              <span className="text-[#F59E0B] font-medium flex items-center gap-1">
+              <span className="text-[#00E599] font-medium flex items-center gap-1">
                 <Check className="w-3.5 h-3.5" /> Allowed
               </span>
             </div>
             <div className="flex justify-between py-2 border-b border-white/5">
               <span className="text-zinc-400">EAs / Algo Trading:</span>
-              <span className="text-[#F59E0B] font-medium flex items-center gap-1">
+              <span className="text-[#00E599] font-medium flex items-center gap-1">
                 <Check className="w-3.5 h-3.5" /> Allowed
               </span>
             </div>
@@ -166,7 +166,7 @@ export default async function AccountDetailPage({ params }: PageProps) {
         {/* Detailed Rules Explanation */}
         <div className="rounded-2xl bg-[#080C0E] border border-white/10 p-6 sm:p-8 space-y-6">
           <div className="flex items-center gap-2 text-white font-bold text-lg">
-            <Scale className="w-5 h-5 text-[#F59E0B]" />
+            <Scale className="w-5 h-5 text-[#00E599]" />
             Detailed Rule Guidelines for this Tier
           </div>
 
@@ -205,7 +205,7 @@ export default async function AccountDetailPage({ params }: PageProps) {
             </div>
             <Link
               href={`/checkout?plan=${product.slug}`}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#F59E0B] hover:bg-[#D97706] text-black font-extrabold text-sm shadow-glow-gold-sm transition-all text-center"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#00E599] hover:bg-[#00c784] text-black font-extrabold text-sm shadow-glow-green-sm transition-all text-center"
             >
               Get This Account →
             </Link>

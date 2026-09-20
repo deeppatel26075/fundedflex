@@ -6,17 +6,16 @@
   :root {
     --background: #030405;
     --foreground: #F8FAFC;
-    --brand-gold: #F59E0B;
-    --brand-gold: #F59E0B;
-    --brand-champagne: #FDE68A;
-    --brand-silver: #E2E8F0;
-    --brand-dark: #07090B;
-    --brand-surface: #0B0E12;
-    --brand-border: rgba(255, 255, 255, 0.08);
+    --brand-primary: #00E599;
+    --brand-mint: #00FFA3;
+    --brand-emerald: #10B981;
+    --brand-dark: #030507;
+    --brand-surface: #080C0E;
+    --brand-border: rgba(0, 229, 153, 0.15);
   }
 
   body {
-    background-color: #030405;
+    background-color: #030507;
     color: var(--foreground);
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     -webkit-font-smoothing: antialiased;
@@ -26,9 +25,9 @@
 
 /* Premium Wallpaper Background with Dark Obsidian Vignette */
 .luxury-wallpaper-bg {
-  background-color: #030405;
+  background-color: #030507;
   background-image: 
-    linear-gradient(to bottom, rgba(3, 4, 5, 0.75) 0%, rgba(3, 4, 5, 0.88) 50%, rgba(3, 4, 5, 0.98) 100%),
+    linear-gradient(to bottom, rgba(3, 5, 7, 0.78) 0%, rgba(3, 5, 7, 0.90) 50%, rgba(3, 5, 7, 0.98) 100%),
     url('/images/luxury-trading-bg.jpg');
   background-size: cover;
   background-position: center top;
@@ -37,9 +36,9 @@
 
 .luxury-hero-backdrop {
   background-image: 
-    radial-gradient(ellipse at 50% 20%, rgba(245, 158, 11, 0.12) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 50%, rgba(229, 184, 105, 0.1) 0%, transparent 50%),
-    linear-gradient(to bottom, rgba(3, 4, 5, 0.6) 0%, rgba(3, 4, 5, 0.92) 80%, #030405 100%),
+    radial-gradient(ellipse at 50% 20%, rgba(0, 229, 153, 0.14) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(0, 255, 163, 0.08) 0%, transparent 50%),
+    linear-gradient(to bottom, rgba(3, 5, 7, 0.6) 0%, rgba(3, 5, 7, 0.92) 80%, #030507 100%),
     url('/images/luxury-trading-bg.jpg');
   background-size: cover;
   background-position: center top;
@@ -47,7 +46,7 @@
 
 .luxury-ribbons-backdrop {
   background-image: 
-    linear-gradient(to bottom, #030405 0%, rgba(3, 4, 5, 0.85) 30%, rgba(3, 4, 5, 0.85) 70%, #030405 100%),
+    linear-gradient(to bottom, #030507 0%, rgba(3, 5, 7, 0.85) 30%, rgba(3, 5, 7, 0.85) 70%, #030507 100%),
     url('/images/luxury-ribbons-bg.jpg');
   background-size: cover;
   background-position: center;
@@ -59,19 +58,19 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #030405;
+  background: #030507;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1A2228;
+  background: #121A1E;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #E5B869;
+  background: #00E599;
 }
 
 /* Ultra-Luxury Crystal Smoked Glass Surfaces */
 .luxury-card {
-  background: linear-gradient(135deg, rgba(16, 22, 28, 0.8) 0%, rgba(7, 10, 14, 0.92) 100%);
+  background: linear-gradient(135deg, rgba(10, 16, 20, 0.85) 0%, rgba(5, 8, 11, 0.94) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -80,14 +79,20 @@
 }
 
 .luxury-card:hover {
-  border-color: rgba(229, 184, 105, 0.4);
-  box-shadow: 0 25px 60px -10px rgba(229, 184, 105, 0.12), inset 0 1px 2px 0 rgba(229, 184, 105, 0.25);
+  border-color: rgba(0, 229, 153, 0.45);
+  box-shadow: 0 25px 60px -10px rgba(0, 229, 153, 0.18), inset 0 1px 2px 0 rgba(0, 255, 163, 0.25);
   transform: translateY(-2px);
 }
 
-/* Metallic Gradients (Gold, Platinum) */
+/* Metallic Gradients (Cyber-Mint, Emerald, Platinum) */
+.mint-text-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #00FFA3 50%, #00E599 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gold-text-gradient {
-  background: linear-gradient(135deg, #FFFFFF 0%, #FDE68A 40%, #D97706 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #00FFA3 50%, #00E599 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -99,34 +104,34 @@
 }
 
 .emerald-gradient-text {
-  background: linear-gradient(135deg, #FFFFFF 0%, #FDE68A 50%, #F59E0B 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #00FFA3 50%, #00E599 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .luxury-gold-button {
-  background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #D97706 100%);
-  box-shadow: 0 0 25px -3px rgba(245, 158, 11, 0.4);
+  background: linear-gradient(135deg, #00FFA3 0%, #00E599 50%, #059669 100%);
+  box-shadow: 0 0 28px -3px rgba(0, 229, 153, 0.5);
   color: #000000;
   font-weight: 800;
   transition: all 0.25s ease-in-out;
 }
 .luxury-gold-button:hover {
-  background: linear-gradient(135deg, #FFFBEB 0%, #FBBF24 50%, #F59E0B 100%);
-  box-shadow: 0 0 35px 0 rgba(245, 158, 11, 0.6);
+  background: linear-gradient(135deg, #A7F3D0 0%, #00FFA3 50%, #00E599 100%);
+  box-shadow: 0 0 38px 0 rgba(0, 229, 153, 0.7);
   transform: scale(1.02);
 }
 
 .luxury-emerald-button {
-  background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #D97706 100%);
-  box-shadow: 0 0 25px -3px rgba(245, 158, 11, 0.4);
+  background: linear-gradient(135deg, #00FFA3 0%, #00E599 50%, #059669 100%);
+  box-shadow: 0 0 28px -3px rgba(0, 229, 153, 0.5);
   color: #000000;
   font-weight: 800;
   transition: all 0.25s ease-in-out;
 }
 .luxury-emerald-button:hover {
-  background: linear-gradient(135deg, #FFFBEB 0%, #FBBF24 50%, #F59E0B 100%);
-  box-shadow: 0 0 35px 0 rgba(245, 158, 11, 0.6);
+  background: linear-gradient(135deg, #A7F3D0 0%, #00FFA3 50%, #00E599 100%);
+  box-shadow: 0 0 38px 0 rgba(0, 229, 153, 0.7);
   transform: scale(1.02);
 }
 

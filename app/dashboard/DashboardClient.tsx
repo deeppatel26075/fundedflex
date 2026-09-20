@@ -134,10 +134,10 @@ export default function DashboardClient({
     <div className="space-y-10">
       {/* Top Welcome Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 sm:p-8 rounded-3xl bg-[#090D0F] border border-white/10 shadow-2xl relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-[#F59E0B]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-80 h-80 bg-[#00E599]/5 rounded-full blur-3xl pointer-events-none" />
 
         <div>
-          <span className="text-xs font-semibold text-[#F59E0B] uppercase tracking-widest block">
+          <span className="text-xs font-semibold text-[#00E599] uppercase tracking-widest block">
             Trader Control Center
           </span>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">
@@ -151,7 +151,7 @@ export default function DashboardClient({
         <div className="flex items-center gap-3">
           <Link
             href="/accounts"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#F59E0B] hover:bg-[#D97706] text-black font-extrabold text-xs shadow-glow-gold-sm transition-all"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#00E599] hover:bg-[#00c784] text-black font-extrabold text-xs shadow-glow-green-sm transition-all"
           >
             <PlusCircle className="w-4 h-4" />
             <span>New Challenge</span>
@@ -171,7 +171,7 @@ export default function DashboardClient({
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-xl font-bold text-white flex items-center gap-2">
-              <KeyRound className="w-5 h-5 text-[#F59E0B]" />
+              <KeyRound className="w-5 h-5 text-[#00E599]" />
               Active Simulated Accounts
             </h2>
             <p className="text-xs text-zinc-400 mt-0.5">
@@ -194,7 +194,7 @@ export default function DashboardClient({
             </p>
             <Link
               href="/accounts"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#F59E0B] text-black text-xs font-bold shadow-glow-gold-sm hover:bg-[#D97706] transition-all"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#00E599] text-black text-xs font-bold shadow-glow-green-sm hover:bg-[#00c784] transition-all"
             >
               <span>Explore Account Marketplace</span>
               <ArrowRight className="w-4 h-4" />
@@ -210,12 +210,12 @@ export default function DashboardClient({
               return (
                 <div
                   key={item.id}
-                  className="rounded-2xl bg-[#080C0E] border border-white/10 p-6 shadow-xl relative overflow-hidden space-y-6 hover:border-[#F59E0B]/30 transition-all group"
+                  className="rounded-2xl bg-[#080C0E] border border-white/10 p-6 shadow-xl relative overflow-hidden space-y-6 hover:border-[#00E599]/30 transition-all group"
                 >
                   {/* Card Header */}
                   <div className="flex items-start justify-between gap-4 pb-4 border-b border-white/10">
                     <div>
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#F59E0B]">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#00E599]">
                         FUNDEDFLEX ACCOUNT
                       </span>
                       <h3 className="text-lg font-extrabold text-white mt-0.5">
@@ -226,8 +226,8 @@ export default function DashboardClient({
                       </span>
                     </div>
 
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-500/10 text-[#F59E0B] border border-amber-500/20">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] animate-pulse" />
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#00E599]/10 text-[#00E599] border border-[#00E599]/20">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#00E599] animate-pulse" />
                       ACTIVE
                     </span>
                   </div>
@@ -246,7 +246,7 @@ export default function DashboardClient({
                           title="Copy Account ID"
                         >
                           {copyStatus[`${item.id}-aid`] ? (
-                            <Check className="w-3.5 h-3.5 text-[#F59E0B]" />
+                            <Check className="w-3.5 h-3.5 text-[#00E599]" />
                           ) : (
                             <Copy className="w-3.5 h-3.5" />
                           )}
@@ -266,7 +266,7 @@ export default function DashboardClient({
                           title="Copy Username"
                         >
                           {copyStatus[`${item.id}-usr`] ? (
-                            <Check className="w-3.5 h-3.5 text-[#F59E0B]" />
+                            <Check className="w-3.5 h-3.5 text-[#00E599]" />
                           ) : (
                             <Copy className="w-3.5 h-3.5" />
                           )}
@@ -291,7 +291,7 @@ export default function DashboardClient({
                           {isRevealed ? (
                             <EyeOff className="w-3.5 h-3.5 text-zinc-400" />
                           ) : (
-                            <Eye className="w-3.5 h-3.5 text-[#F59E0B]" />
+                            <Eye className="w-3.5 h-3.5 text-[#00E599]" />
                           )}
                         </button>
                         {isRevealed && (
@@ -302,7 +302,7 @@ export default function DashboardClient({
                             title="Copy Password"
                           >
                             {copyStatus[`${item.id}-pwd`] ? (
-                              <Check className="w-3.5 h-3.5 text-[#F59E0B]" />
+                              <Check className="w-3.5 h-3.5 text-[#00E599]" />
                             ) : (
                               <Copy className="w-3.5 h-3.5" />
                             )}
@@ -345,7 +345,7 @@ export default function DashboardClient({
                     >
                       {copyStatus[`${item.id}-all`] ? (
                         <>
-                          <Check className="w-3.5 h-3.5 text-[#F59E0B]" />
+                          <Check className="w-3.5 h-3.5 text-[#00E599]" />
                           <span>Credentials Copied to Clipboard</span>
                         </>
                       ) : (
@@ -410,9 +410,9 @@ export default function DashboardClient({
                         <span
                           className={`inline-block px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border ${
                             ord.status === "ACCOUNT_READY" || ord.status === "PAYMENT_CONFIRMED"
-                              ? "bg-amber-500/10 text-[#F59E0B] border-amber-500/20"
+                              ? "bg-[#00E599]/10 text-[#00E599] border-[#00E599]/20"
                               : ord.status === "PAYMENT_PENDING_REVIEW"
-                              ? "bg-amber-500/10 text-amber-400 border-amber-500/20"
+                              ? "bg-[#00E599]/10 text-[#00E599] border-[#00E599]/20"
                               : ord.status === "PAYMENT_REJECTED"
                               ? "bg-red-500/10 text-red-400 border-red-500/20"
                               : "bg-zinc-800 text-zinc-300 border-white/10"
@@ -427,7 +427,7 @@ export default function DashboardClient({
                       <td className="px-6 py-4 text-right">
                         <Link
                           href={`/payment/${ord.id}`}
-                          className="inline-flex items-center gap-1 text-[#F59E0B] hover:underline font-semibold"
+                          className="inline-flex items-center gap-1 text-[#00E599] hover:underline font-semibold"
                         >
                           <span>View Details</span>
                           <ExternalLink className="w-3 h-3" />

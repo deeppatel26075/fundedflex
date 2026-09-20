@@ -34,7 +34,7 @@ export default async function AccountsPage() {
   return (
     <div className="py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
-        <span className="text-xs font-bold uppercase tracking-widest text-[#F59E0B]">
+        <span className="text-xs font-bold uppercase tracking-widest text-[#00E599]">
           Evaluation Catalog
         </span>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white mt-2">
