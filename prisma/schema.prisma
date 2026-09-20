@@ -1,0 +1,111 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id           String              @id @default(cuid())
+  email        String              @unique
+  passwordHash String
+  name         String
+  role         String              @default("USER") // USER, ADMIN
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+  orders       Order[]
+  credentials  AccountCredential[]
+  auditLogs    AuditLog[]
+}
+
+model Product {
+  id              String   @id @default(cuid())
+  name            String
+  slug            String   @unique
+  accountSize     Float    // e.g. 50000
+  priceUSD        Float    // e.g. 299
+  dailyDrawdown   Float    @default(5.0) // 5% default
+  maxDrawdown     Float    @default(10.0) // 10% default
+  leverage        String   @default("1:100") // 1:100 default
+  profitTarget    Float    @default(8.0) // 8% target
+  tradingPeriod   String   @default("Unlimited")
+  minTradingDays  Int      @default(3)
+  rewardSplit     String   @default("Up to 90%")
+  weekendHolding  Boolean  @default(true)
+  newsTrading     Boolean  @default(true)
+  eaTrading       Boolean  @default(true)
+  platform        String   @default("FundedFlex Pro Terminal / MT5")
+  isActive        Boolean  @default(true)
+  isFeatured      Boolean  @default(false)
+  sortOrder       Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  orders          Order[]
+}
+
+model Order {
+  id                   String             @id @default(cuid())
+  orderNumber          String             @unique // e.g. "FF-ORD-928174"
+  userId               String
+  user                 User               @relation(fields: [userId], references: [id])
+  productId            String
+  product              Product            @relation(fields: [productId], references: [id])
+  amountUSD            Float
+  cryptoAsset          String             // USDT, USDC, BTC, ETH
+  network              String             // TRC20, ERC20, BEP20, etc.
+  walletAddress        String
+  expectedCryptoAmount Float
+  txHash               String?
+  paymentProof         String?
+  status               String             @default("PENDING_PAYMENT")
+  // PENDING_PAYMENT, PAYMENT_SUBMITTED, PAYMENT_PENDING_REVIEW, PAYMENT_CONFIRMED, PAYMENT_REJECTED, ACCOUNT_READY, CANCELLED
+  rejectionReason      String?
+  adminNotes           String?
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+  approvedAt           DateTime?
+  credential           AccountCredential?
+}
+
+model AccountCredential {
+  id                String   @id @default(cuid())
+  orderId           String   @unique
+  order             Order    @relation(fields: [orderId], references: [id])
+  userId            String
+  user              User     @relation(fields: [userId], references: [id])
+  accountId         String   @unique // e.g. "FF-739284"
+  username          String   // e.g. "FF739284"
+  encryptedPassword String
+  server            String   @default("FundedFlex-Live-Sim01")
+  platform          String   @default("FundedFlex Client Terminal")
+  initialBalance    Float    @default(50000)
+  status            String   @default("ACTIVE") // ACTIVE, SUSPENDED
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model PaymentMethod {
+  id            String   @id @default(cuid())
+  asset         String   // USDT, USDC, BTC, ETH
+  network       String   // TRC20, ERC20, BEP20, BITCOIN, ETHEREUM
+  walletAddress String
+  qrImage       String?  // SVG or Data URL or image path
+  instructions  String?
+  isActive      Boolean  @default(true)
+  sortOrder     Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  adminId   String?
+  admin     User?    @relation(fields: [adminId], references: [id])
+  action    String   // APPROVE_PAYMENT, REJECT_PAYMENT, UPDATE_PRODUCT, etc.
+  entity    String   // Order, Product, PaymentMethod
+  entityId  String
+  metadata  String?  // JSON string
+  createdAt DateTime @default(now())
+}
