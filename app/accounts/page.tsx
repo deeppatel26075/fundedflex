@@ -12,7 +12,7 @@ export default async function AccountsPage() {
     orderBy: { sortOrder: "asc" },
   });
 
-  const products = rawProducts.map((p) => ({
+  const products = rawProducts.map((p: any) => ({
     id: p.id,
     name: p.name,
     slug: p.slug,
